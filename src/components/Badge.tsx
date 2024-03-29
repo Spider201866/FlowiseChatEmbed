@@ -44,7 +44,7 @@ export const Badge = (props: Props) => {
         'background-color': props.badgeBackgroundColor ?? '#ffffff',
       }}
     >
-      Powered by
+      Poowered by
       <a
         ref={liteBadge}
         href={'https://flowiseai.com'}
