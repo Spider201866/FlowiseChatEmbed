@@ -47,7 +47,7 @@ export const Badge = (props: Props) => {
       Powered by
       <a
         ref={liteBadge}
-        href={'https://flowiseai.com'}
+        href={'https://medicine.st-andrews.ac.uk/arclight/'}
         target="_blank"
         rel="noopener noreferrer"
         class="lite-badge"
