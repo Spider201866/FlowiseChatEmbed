@@ -70,6 +70,7 @@ export const TextInput = (props: Props) => {
         margin: 'auto',
         'background-color': props.backgroundColor ?? defaultBackgroundColor,
         color: props.textColor ?? defaultTextColor,
+        'border-radius': '12px', // Add this line to change the border-radius
       }}
       onKeyDown={submitWhenEnter}
     >
