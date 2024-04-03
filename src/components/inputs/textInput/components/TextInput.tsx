@@ -71,6 +71,7 @@ export const TextInput = (props: Props) => {
         'background-color': props.backgroundColor ?? defaultBackgroundColor,
         color: props.textColor ?? defaultTextColor,
         'border-radius': '18px', // Add this line to change the border-radius 1-4-24
+        'border': '1px solid #cccccc', // Darker border color and slightly thicker
       }}
       onKeyDown={submitWhenEnter}
     >
