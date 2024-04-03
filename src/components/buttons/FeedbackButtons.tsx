@@ -24,7 +24,7 @@ export const CopyToClipboardButton = (props: RatingButtonProps) => {
       title="Copy to clipboard"
     >
       <Show when={!props.isLoading} fallback={<Spinner class="text-white" />}>
-        <ClipboardIcon color={props.sendButtonColor} class={'send-icon flex ' + (props.disableIcon ? 'hidden' : '')} />
+        <ClipboardIcon color={iconColor} class={'send-icon flex ' + (props.disableIcon ? 'hidden' : '')} />
       </Show>
     </button>
   );
@@ -45,7 +45,7 @@ export const ThumbsUpButton = (props: RatingButtonProps) => {
       title="Thumbs Up"
     >
       <Show when={!props.isLoading} fallback={<Spinner class="text-white" />}>
-        <ThumbsUpIcon color={props.sendButtonColor} class={'send-icon flex ' + (props.disableIcon ? 'hidden' : '')} />
+        <ThumbsUpIcon color={iconColor} class={'send-icon flex ' + (props.disableIcon ? 'hidden' : '')} />
       </Show>
     </button>
   );
@@ -66,7 +66,7 @@ export const ThumbsDownButton = (props: RatingButtonProps) => {
       title="Thumbs Down"
     >
       <Show when={!props.isLoading} fallback={<Spinner class="text-white" />}>
-        <ThumbsDownIcon color={props.sendButtonColor} class={'send-icon flex ' + (props.disableIcon ? 'hidden' : '')} />
+        <ThumbsDownIcon color={iconColor} class={'send-icon flex ' + (props.disableIcon ? 'hidden' : '')} />
       </Show>
     </button>
   );
