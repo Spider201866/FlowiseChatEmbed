@@ -3,12 +3,12 @@ const defaultButtonColor = '#808080';
 export const ThumbsUpIcon = (props: JSX.SvgSVGAttributes<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    class="icon icon-tabler icon-tabler-refresh w-4 h-4"
+    class="icon icon-tabler icon-tabler-thumbs-up w-4 h-4" // Ensure correct class names for styling
     width="24"
     height="24"
     viewBox="0 0 24 24"
-    fill={props.color ?? 'none'}
-    stroke={props.color ?? defaultButtonColor}
+    fill="none" // Keep the icon's interior unfilled
+    stroke={props.color ?? defaultButtonColor} // Use provided color or default to grey
     stroke-width="2"
     stroke-linecap="round"
     stroke-linejoin="round"
