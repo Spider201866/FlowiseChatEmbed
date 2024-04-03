@@ -11,6 +11,7 @@ type RatingButtonProps = {
 } & JSX.ButtonHTMLAttributes<HTMLButtonElement>;
 
 export const CopyToClipboardButton = (props: RatingButtonProps) => {
+  const iconColor = props.sendButtonColor || '#808080'; // Default grey color
   return (
     <button
       disabled={props.isDisabled || props.isLoading}
@@ -30,6 +31,7 @@ export const CopyToClipboardButton = (props: RatingButtonProps) => {
 };
 
 export const ThumbsUpButton = (props: RatingButtonProps) => {
+  const iconColor = props.sendButtonColor || '#808080'; // Default grey color
   return (
     <button
       type="submit"
@@ -50,6 +52,7 @@ export const ThumbsUpButton = (props: RatingButtonProps) => {
 };
 
 export const ThumbsDownButton = (props: RatingButtonProps) => {
+  const iconColor = props.sendButtonColor || '#808080'; // Default grey color
   return (
     <button
       type="submit"
