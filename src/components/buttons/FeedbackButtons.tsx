@@ -30,6 +30,27 @@ export const CopyToClipboardButton = (props: RatingButtonProps) => {
   );
 };
 
+export const ThumbsDownButton = (props: RatingButtonProps) => {
+  const iconColor = props.sendButtonColor || '#808080'; // Default grey color
+  return (
+    <button
+      type="submit"
+      disabled={props.isDisabled || props.isLoading}
+      {...props}
+      class={
+        'p-2 justify-center font-semibold text-white focus:outline-none flex items-center disabled:opacity-50 disabled:cursor-not-allowed disabled:brightness-100 transition-all filter hover:brightness-90 active:brightness-75 chatbot-button ' +
+        props.class
+      }
+      style={{ background: 'transparent', border: 'none' }}
+      title="Thumbs Down"
+    >
+      <Show when={!props.isLoading} fallback={<Spinner class="text-white" />}>
+        <ThumbsDownIcon color={iconColor} class={'send-icon flex ' + (props.disableIcon ? 'hidden' : '')} />
+      </Show>
+    </button>
+  );
+};
+
 export const ThumbsUpButton = (props: RatingButtonProps) => {
   const iconColor = props.sendButtonColor || '#808080'; // Default grey color
   return (
@@ -51,23 +72,3 @@ export const ThumbsUpButton = (props: RatingButtonProps) => {
   );
 };
 
-export const ThumbsDownButton = (props: RatingButtonProps) => {
-  const iconColor = props.sendButtonColor || '#808080'; // Default grey color
-  return (
-    <button
-      type="submit"
-      disabled={props.isDisabled || props.isLoading}
-      {...props}
-      class={
-        'p-2 justify-center font-semibold text-white focus:outline-none flex items-center disabled:opacity-50 disabled:cursor-not-allowed disabled:brightness-100 transition-all filter hover:brightness-90 active:brightness-75 chatbot-button ' +
-        props.class
-      }
-      style={{ background: 'transparent', border: 'none' }}
-      title="Thumbs Down"
-    >
-      <Show when={!props.isLoading} fallback={<Spinner class="text-white" />}>
-        <ThumbsDownIcon color={iconColor} class={'send-icon flex ' + (props.disableIcon ? 'hidden' : '')} />
-      </Show>
-    </button>
-  );
-};
