@@ -70,12 +70,17 @@ export const TextInput = (props: Props) => {
         margin: 'auto',
         'background-color': props.backgroundColor ?? defaultBackgroundColor,
         color: props.textColor ?? defaultTextColor,
-        'border-radius': '18px',  // Rounded corners
-        'font-family': '"Calibri Light", Arial, sans-serif',  // Set font-family
-        'overflow': 'hidden',  // Remove scrollbar
+        'border-radius': '18px', // Rounded corners
+        'font-family': '"Calibri Light", Arial, sans-serif', // Set font-family
+        'overflow-y': 'hidden', // Remove vertical scrollbar
+        'overflow-x': 'hidden', // Remove horizontal scrollbar
+        height: '56px', // Start with a reasonable height
+        'min-width': '200px', // Minimum width for a good initial display
+        'max-width': '100%', // Allow to expand to the full width of its container
       }}
       onKeyDown={submitWhenEnter}
     >
+  
       {props.uploadsConfig?.isImageUploadAllowed ? (
         <>
           <ImageUploadButton
@@ -98,7 +103,7 @@ export const TextInput = (props: Props) => {
         disabled={props.disabled}
         placeholder={props.placeholder ?? 'Type your question'}
         style={{
-          'font-family': '"Calibri Light", Arial, sans-serif',  // Set font-family for input
+          'font-family': '"Calibri Light", Arial, sans-serif', // Set font-family for input
         }}
       />
       {props.uploadsConfig?.isSpeechToTextEnabled ? (
