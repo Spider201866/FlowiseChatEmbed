@@ -70,6 +70,9 @@ export const TextInput = (props: Props) => {
         margin: 'auto',
         'background-color': props.backgroundColor ?? defaultBackgroundColor,
         color: props.textColor ?? defaultTextColor,
+        'border-radius': '18px',  // Rounded corners
+        'font-family': '"Calibri Light", Arial, sans-serif',  // Set font-family
+        'overflow': 'hidden',  // Remove scrollbar
       }}
       onKeyDown={submitWhenEnter}
     >
@@ -82,7 +85,7 @@ export const TextInput = (props: Props) => {
             isDisabled={props.disabled}
             on:click={handleImageUploadClick}
           >
-            <span style={{ 'font-family': 'Poppins, sans-serif' }}>Image Upload</span>
+            <span style={{ 'font-family': '"Calibri Light", Arial, sans-serif' }}>Image Upload</span>
           </ImageUploadButton>
           <input style={{ display: 'none' }} multiple ref={fileUploadRef as HTMLInputElement} type="file" onChange={handleFileChange} />
         </>
@@ -94,6 +97,9 @@ export const TextInput = (props: Props) => {
         fontSize={props.fontSize}
         disabled={props.disabled}
         placeholder={props.placeholder ?? 'Type your question'}
+        style={{
+          'font-family': '"Calibri Light", Arial, sans-serif',  // Set font-family for input
+        }}
       />
       {props.uploadsConfig?.isSpeechToTextEnabled ? (
         <RecordAudioButton
@@ -103,7 +109,7 @@ export const TextInput = (props: Props) => {
           isDisabled={props.disabled}
           on:click={props.onMicrophoneClicked}
         >
-          <span style={{ 'font-family': 'Poppins, sans-serif' }}>Record Audio</span>
+          <span style={{ 'font-family': '"Calibri Light", Arial, sans-serif' }}>Record Audio</span>
         </RecordAudioButton>
       ) : null}
       <SendButton
@@ -113,7 +119,7 @@ export const TextInput = (props: Props) => {
         class="m-0 h-14 flex items-center justify-center"
         on:click={submit}
       >
-        <span style={{ 'font-family': 'Poppins, sans-serif' }}>Send</span>
+        <span style={{ 'font-family': '"Calibri Light", Arial, sans-serif' }}>Send</span>
       </SendButton>
     </div>
   );
