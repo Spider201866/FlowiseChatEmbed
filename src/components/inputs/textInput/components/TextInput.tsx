@@ -80,7 +80,6 @@ export const TextInput = (props: Props) => {
       }}
       onKeyDown={submitWhenEnter}
     >
-  
       {props.uploadsConfig?.isImageUploadAllowed ? (
         <>
           <ImageUploadButton
