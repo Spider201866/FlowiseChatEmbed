@@ -73,10 +73,11 @@ export const TextInput = (props: Props) => {
         'border-radius': '21px', // Rounded corners
         border: 'none', // No border
         'box-shadow': 'none', // No shadow
-        padding: '5px 10px', // Optional padding for better aesthetics, adjusted padding to reduce height
+        padding: '5px 10px', // Padding for better aesthetics
         'font-family': 'Calibri Light, sans-serif', // Font family
         'min-height': '20px', // Adjusted min-height for single line
         'max-height': '128px', // Maximum height to fit more lines
+        'align-items': 'center', // Center align items vertically
       }}
       onKeyDown={submitWhenEnter}
     >
@@ -103,7 +104,7 @@ export const TextInput = (props: Props) => {
           setInputValue(target.value);
         }}
         value={inputValue()}
-        placeholder={props.placeholder ?? 'Type your question'}
+        placeholder={props.placeholder ?? 'Message Alan...'}
         disabled={props.disabled}
         style={{
           width: '100%', // Ensure the input takes full width
@@ -111,13 +112,14 @@ export const TextInput = (props: Props) => {
           resize: 'none', // Prevent manual resizing
           'background-color': '#f4f4f4', // Match the div's background color
           color: props.textColor ?? defaultTextColor,
-          'font-family': 'Poppins, sans-serif', // Font family
+          'font-family': 'Calibri Light, sans-serif', // Font family
           'border-radius': '21px', // Rounded corners
-          padding: '5px', // Padding inside the textarea
+          padding: '0', // Removed padding inside the textarea to better align text
           'box-sizing': 'border-box', // Ensure padding is included in the height
           'overflow-y': 'hidden', // Hide the scrollbar
           border: 'none', // No border
           'line-height': '20px', // Adjust line height for centering text
+          'outline': 'none', // Remove outline on focus
         }}
       />
       {props.uploadsConfig?.isSpeechToTextEnabled ? (
