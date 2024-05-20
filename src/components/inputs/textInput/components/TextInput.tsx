@@ -1,5 +1,3 @@
-// TextInput component with updated styles
-
 import { ShortTextInput } from './ShortTextInput';
 import { isMobile } from '@/utils/isMobileSignal';
 import { createSignal, createEffect, onMount, Setter } from 'solid-js';
@@ -28,8 +26,8 @@ const defaultTextColor = '#303235';
 
 export const TextInput = (props: Props) => {
   const [inputValue, setInputValue] = createSignal(props.defaultValue ?? '');
-  let inputRef: HTMLInputElement | HTMLTextAreaElement | undefined;
-  let fileUploadRef: HTMLInputElement | HTMLTextAreaElement | undefined;
+  let inputRef: HTMLTextAreaElement | undefined;
+  let fileUploadRef: HTMLInputElement | undefined;
 
   const handleInput = (inputValue: string) => setInputValue(inputValue);
 
@@ -79,7 +77,6 @@ export const TextInput = (props: Props) => {
         'font-family': 'Calibri Light, sans-serif', // Font family
         'min-height': '40px', // Adjusted min-height for single line
         'max-height': '128px', // Maximum height to fit more lines
-        'overflow-y': 'auto', // Handle overflow
       }}
       onKeyDown={submitWhenEnter}
     >
@@ -97,13 +94,29 @@ export const TextInput = (props: Props) => {
           <input style={{ display: 'none' }} multiple ref={fileUploadRef as HTMLInputElement} type="file" onChange={handleFileChange} />
         </>
       ) : null}
-      <ShortTextInput
+      <textarea
         ref={inputRef as HTMLTextAreaElement}
-        onInput={handleInput}
+        onInput={(e) => {
+          const target = e.target as HTMLTextAreaElement;
+          target.style.height = 'auto'; // Reset height
+          target.style.height = `${target.scrollHeight}px`; // Set to scroll height
+          setInputValue(target.value);
+        }}
         value={inputValue()}
-        fontSize={props.fontSize}
-        disabled={props.disabled}
         placeholder={props.placeholder ?? 'Type your question'}
+        disabled={props.disabled}
+        style={{
+          width: '100%', // Ensure the input takes full width
+          height: 'auto', // Let the height adjust based on content
+          resize: 'none', // Prevent manual resizing
+          'background-color': '#f4f4f4', // Match the div's background color
+          color: props.textColor ?? defaultTextColor,
+          'font-family': 'Calibri Light, sans-serif', // Font family
+          'border-radius': '21px', // Rounded corners
+          padding: '10px', // Padding inside the textarea
+          'box-sizing': 'border-box', // Ensure padding is included in the height
+          'overflow-y': 'hidden', // Hide the scrollbar
+        }}
       />
       {props.uploadsConfig?.isSpeechToTextEnabled ? (
         <RecordAudioButton
