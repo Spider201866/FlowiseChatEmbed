@@ -66,7 +66,7 @@ export const TextInput = (props: Props) => {
 
   return (
     <div
-      class={'w-full h-auto max-h-[128px] min-h-[56px] flex items-end justify-between chatbot-input'}
+      class={'w-full h-auto flex items-end justify-between chatbot-input'}
       data-testid="input"
       style={{
         margin: 'auto',
@@ -77,6 +77,9 @@ export const TextInput = (props: Props) => {
         'box-shadow': 'none', // No shadow
         padding: '10px', // Optional padding for better aesthetics
         'font-family': 'Calibri Light, sans-serif', // Font family
+        'min-height': '40px', // Adjusted min-height for single line
+        'max-height': '128px', // Maximum height to fit more lines
+        'overflow-y': 'auto', // Handle overflow
       }}
       onKeyDown={submitWhenEnter}
     >
