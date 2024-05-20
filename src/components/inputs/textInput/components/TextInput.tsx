@@ -112,14 +112,14 @@ export const TextInput = (props: Props) => {
           resize: 'none', // Prevent manual resizing
           'background-color': '#f4f4f4', // Match the div's background color
           color: props.textColor ?? defaultTextColor,
-          'font-family': 'Calibri Light, sans-serif', // Font family
-          'border-radius': '21px', // Rounded corners
-          padding: '0', // Removed padding inside the textarea to better align text
+          'font-family': 'Poppins, sans-serif', // Font family
+          'border-radius': '25px', // Rounded corners
+          padding: '2 10px', // Removed padding inside the textarea to better align text
           'box-sizing': 'border-box', // Ensure padding is included in the height
           'overflow-y': 'hidden', // Hide the scrollbar
           border: 'none', // No border
           'line-height': '20px', // Adjust line height for centering text
-          'outline': 'none', // Remove outline on focus
+          outline: 'none', // Remove outline on focus
         }}
       />
       {props.uploadsConfig?.isSpeechToTextEnabled ? (
