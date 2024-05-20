@@ -36,8 +36,8 @@ export type ChatWindowTheme = {
   showTitle?: boolean;
   title?: string;
   titleAvatarSrc?: string;
-  welcomeMessage?: string | null;  // Allow welcomeMessage to be null
-  errorMessage?: string | null;    // Allow errorMessage to be null
+  welcomeMessage?: string;
+  errorMessage?: string;
   backgroundColor?: string;
   height?: number;
   width?: number;
