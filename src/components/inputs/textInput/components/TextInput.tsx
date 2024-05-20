@@ -1,3 +1,5 @@
+// TextInput component with updated styles
+
 import { ShortTextInput } from './ShortTextInput';
 import { isMobile } from '@/utils/isMobileSignal';
 import { createSignal, createEffect, onMount, Setter } from 'solid-js';
@@ -64,19 +66,17 @@ export const TextInput = (props: Props) => {
 
   return (
     <div
-      class={'w-full h-auto max-h-[128px] min-h-[56px] flex items-end justify-between chatbot-input border border-[#eeeeee]'}
+      class={'w-full h-auto max-h-[128px] min-h-[56px] flex items-end justify-between chatbot-input'}
       data-testid="input"
       style={{
         margin: 'auto',
-        'background-color': props.backgroundColor ?? defaultBackgroundColor,
+        'background-color': '#f4f4f4', // Grey background
         color: props.textColor ?? defaultTextColor,
-        'border-radius': '18px', // Rounded corners
-        'font-family': '"Calibri Light", Arial, sans-serif', // Set font-family
-        'overflow-y': 'hidden', // Remove vertical scrollbar
-        'overflow-x': 'hidden', // Remove horizontal scrollbar
-        height: '56px', // Start with a reasonable height
-        'min-width': '200px', // Minimum width for a good initial display
-        'max-width': '100%', // Allow to expand to the full width of its container
+        'border-radius': '15px', // Rounded corners
+        border: 'none', // No border
+        'box-shadow': 'none', // No shadow
+        padding: '10px', // Optional padding for better aesthetics
+        'font-family': 'Calibri Light, sans-serif' // Font family
       }}
       onKeyDown={submitWhenEnter}
     >
@@ -89,7 +89,7 @@ export const TextInput = (props: Props) => {
             isDisabled={props.disabled}
             on:click={handleImageUploadClick}
           >
-            <span style={{ 'font-family': '"Calibri Light", Arial, sans-serif' }}>Image Upload</span>
+            <span style={{ 'font-family': 'Poppins, sans-serif' }}>Image Upload</span>
           </ImageUploadButton>
           <input style={{ display: 'none' }} multiple ref={fileUploadRef as HTMLInputElement} type="file" onChange={handleFileChange} />
         </>
@@ -101,9 +101,6 @@ export const TextInput = (props: Props) => {
         fontSize={props.fontSize}
         disabled={props.disabled}
         placeholder={props.placeholder ?? 'Type your question'}
-        style={{
-          'font-family': '"Calibri Light", Arial, sans-serif', // Set font-family for input
-        }}
       />
       {props.uploadsConfig?.isSpeechToTextEnabled ? (
         <RecordAudioButton
@@ -113,7 +110,7 @@ export const TextInput = (props: Props) => {
           isDisabled={props.disabled}
           on:click={props.onMicrophoneClicked}
         >
-          <span style={{ 'font-family': '"Calibri Light", Arial, sans-serif' }}>Record Audio</span>
+          <span style={{ 'font-family': 'Poppins, sans-serif' }}>Record Audio</span>
         </RecordAudioButton>
       ) : null}
       <SendButton
@@ -123,7 +120,7 @@ export const TextInput = (props: Props) => {
         class="m-0 h-14 flex items-center justify-center"
         on:click={submit}
       >
-        <span style={{ 'font-family': '"Calibri Light", Arial, sans-serif' }}>Send</span>
+        <span style={{ 'font-family': 'Poppins, sans-serif' }}>Send</span>
       </SendButton>
     </div>
   );
