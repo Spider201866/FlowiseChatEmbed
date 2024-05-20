@@ -76,7 +76,7 @@ export const TextInput = (props: Props) => {
         border: 'none', // No border
         'box-shadow': 'none', // No shadow
         padding: '10px', // Optional padding for better aesthetics
-        'font-family': 'Calibri Light, sans-serif' // Font family
+        'font-family': 'Calibri Light, sans-serif', // Font family
       }}
       onKeyDown={submitWhenEnter}
     >
