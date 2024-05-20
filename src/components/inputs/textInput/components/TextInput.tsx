@@ -73,9 +73,9 @@ export const TextInput = (props: Props) => {
         'border-radius': '21px', // Rounded corners
         border: 'none', // No border
         'box-shadow': 'none', // No shadow
-        padding: '10px', // Optional padding for better aesthetics
+        padding: '5px 10px', // Optional padding for better aesthetics, adjusted padding to reduce height
         'font-family': 'Calibri Light, sans-serif', // Font family
-        'min-height': '40px', // Adjusted min-height for single line
+        'min-height': '30px', // Adjusted min-height for single line
         'max-height': '128px', // Maximum height to fit more lines
       }}
       onKeyDown={submitWhenEnter}
@@ -111,11 +111,13 @@ export const TextInput = (props: Props) => {
           resize: 'none', // Prevent manual resizing
           'background-color': '#f4f4f4', // Match the div's background color
           color: props.textColor ?? defaultTextColor,
-          'font-family': 'Calibri Light, sans-serif', // Font family
+          'font-family': 'Poppins, sans-serif', // Font family
           'border-radius': '21px', // Rounded corners
-          padding: '10px', // Padding inside the textarea
+          padding: '5px', // Padding inside the textarea
           'box-sizing': 'border-box', // Ensure padding is included in the height
           'overflow-y': 'hidden', // Hide the scrollbar
+          border: 'none', // No border
+          'line-height': '1.5', // Adjust line height for centering text
         }}
       />
       {props.uploadsConfig?.isSpeechToTextEnabled ? (
