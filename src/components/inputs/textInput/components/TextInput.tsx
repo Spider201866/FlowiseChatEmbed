@@ -72,7 +72,7 @@ export const TextInput = (props: Props) => {
         margin: 'auto',
         'background-color': '#f4f4f4', // Grey background
         color: props.textColor ?? defaultTextColor,
-        'border-radius': '15px', // Rounded corners
+        'border-radius': '21px', // Rounded corners
         border: 'none', // No border
         'box-shadow': 'none', // No shadow
         padding: '10px', // Optional padding for better aesthetics

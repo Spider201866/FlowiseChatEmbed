@@ -1,5 +1,7 @@
 import { JSX } from 'solid-js/jsx-runtime';
+
 const defaultButtonColor = '#000000';
+
 export const AddImageIcon = (props: JSX.SvgSVGAttributes<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -11,6 +13,7 @@ export const AddImageIcon = (props: JSX.SvgSVGAttributes<SVGSVGElement>) => (
     stroke-width="2"
     stroke-linecap="round"
     stroke-linejoin="round"
+    style={{ color: props.color ?? defaultButtonColor }} // Added style attribute
   >
     <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7" />
     <line x1="16" x2="22" y1="5" y2="5" />
