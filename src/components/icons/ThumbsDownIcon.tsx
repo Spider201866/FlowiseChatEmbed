@@ -8,7 +8,7 @@ export const ThumbsDownIcon = (props: JSX.SvgSVGAttributes<SVGSVGElement>) => (
     height="24"
     viewBox="0 0 24 24"
     fill="none"
-    stroke="c3c3c3"
+    stroke="#c3c3c3"
     stroke-width="2"
     stroke-linecap="round"
     stroke-linejoin="round"
