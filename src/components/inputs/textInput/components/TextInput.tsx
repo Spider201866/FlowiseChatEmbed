@@ -95,33 +95,36 @@ export const TextInput = (props: Props) => {
           <input style={{ display: 'none' }} multiple ref={fileUploadRef as HTMLInputElement} type="file" onChange={handleFileChange} />
         </>
       ) : null}
-      <textarea
-        ref={inputRef as HTMLTextAreaElement}
-        onInput={(e) => {
-          const target = e.target as HTMLTextAreaElement;
-          target.style.height = 'auto'; // Reset height
-          target.style.height = `${target.scrollHeight}px`; // Set to scroll height
-          setInputValue(target.value);
-        }}
-        value={inputValue()}
-        placeholder={props.placeholder ?? 'Message Alan...'}
-        disabled={props.disabled}
-        style={{
-          width: '100%', // Ensure the input takes full width
-          height: 'auto', // Let the height adjust based on content
-          resize: 'none', // Prevent manual resizing
-          'background-color': '#f4f4f4', // Match the div's background color
-          color: props.textColor ?? defaultTextColor,
-          'font-family': 'Poppins, sans-serif', // Font family
-          'border-radius': '25px', // Rounded corners
-          padding: '5px 20px', // Removed padding inside the textarea to better align text
-          'box-sizing': 'border-box', // Ensure padding is included in the height
-          'overflow-y': 'hidden', // Hide the scrollbar
-          border: 'none', // No border
-          'line-height': '20px', // Adjust line height for centering text
-          outline: 'none', // Remove outline on focus
-        }}
-      />
+<textarea
+  ref={inputRef as HTMLTextAreaElement}
+  onInput={(e) => {
+    const target = e.target as HTMLTextAreaElement;
+    target.style.height = 'auto'; // Reset height
+    target.style.height = `${target.scrollHeight}px`; // Set to scroll height
+    setInputValue(target.value);
+  }}
+  value={inputValue()}
+  placeholder={props.placeholder ?? 'Message Alan...'}
+  disabled={props.disabled}
+  style={{
+    width: '100%', // Ensure the input takes full width
+    height: 'auto', // Let the height adjust based on content
+    resize: 'none', // Prevent manual resizing
+    'background-color': '#f4f4f4', // Match the div's background color
+    color: props.textColor ?? defaultTextColor,
+    'font-family': 'Poppins, sans-serif', // Font family
+    'border-radius': '25px', // Rounded corners
+    padding: '0 20px', // Padding inside the textarea for horizontal spacing
+    'box-sizing': 'border-box', // Ensure padding is included in the height
+    'overflow-y': 'hidden', // Hide the scrollbar
+    border: 'none', // No border
+    'line-height': '20px', // Adjust line height for centering text
+    outline: 'none', // Remove outline on focus
+    'display': 'flex', // Flex display for vertical centering
+    'align-items': 'center', // Center align items vertically
+  }}
+/>
+
       {props.uploadsConfig?.isSpeechToTextEnabled ? (
         <RecordAudioButton
           buttonColor={props.sendButtonColor}
