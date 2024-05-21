@@ -83,6 +83,7 @@ pre {
 }
 
 
+*/* Global reset CSS */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -91,9 +92,12 @@ pre {
   background: transparent; /* Ensure no default background color */
 }
 
-body {
-  background-color: white; /* Ensure the body background is white */
+body, html, #root, .app-container, .parent-container, .bubble-typing-container, .flex.items-center {
+  background-color: white !important; /* Ensure the background is white */
+  box-shadow: none !important;
+  border: none !important;
 }
+
 
 .bubble-typing {
   display: flex;
