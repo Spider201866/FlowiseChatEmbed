@@ -193,7 +193,7 @@ export const Bot = (botProps: BotProps & { class?: string }) => {
     [], // Start with an empty array
     { equals: false },
   );
-  
+
   const [socketIOClientId, setSocketIOClientId] = createSignal('');
   const [isChatFlowAvailableToStream, setIsChatFlowAvailableToStream] = createSignal(false);
   const [chatId, setChatId] = createSignal(

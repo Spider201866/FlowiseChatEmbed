@@ -115,7 +115,7 @@ export const TextInput = (props: Props) => {
           color: props.textColor ?? defaultTextColor,
           'font-family': 'Poppins, sans-serif', // Font family
           'border-radius': '25px', // Rounded corners
-          padding: '5px 20px', // Padding inside the textarea for vertical and horizontal spacing
+          padding: '5px 10px 5px 20px', // Padding inside the textarea for vertical and horizontal spacing
           'box-sizing': 'border-box', // Ensure padding is included in the height
           'overflow-y': 'hidden', // Hide the scrollbar
           border: 'none', // No border
