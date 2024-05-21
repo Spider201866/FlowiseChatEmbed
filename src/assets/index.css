@@ -90,8 +90,8 @@ pre {
   justify-content: center;
   width: 24px; /* Match the SVG dimensions */
   height: 24px; /* Match the SVG dimensions */
+  background-color: white; /* Ensure background is pure white */
   position: relative;
-  background-color: white; /* Set background to white */
 }
 
 .bubble1, .bubble2, .bubble3 {
@@ -101,6 +101,10 @@ pre {
   border-radius: 50%;
   position: absolute;
   animation: spinner_vXu6 1.2s cubic-bezier(0.52, .6, .25, .99) infinite;
+  margin: 0; /* Ensure no margins */
+  padding: 0; /* Ensure no padding */
+  border: none; /* Ensure no borders */
+  box-shadow: none; /* Ensure no box-shadow */
 }
 
 .bubble2 {
@@ -121,6 +125,7 @@ pre {
     opacity: 0;
   }
 }
+
 
 
 
