@@ -91,6 +91,7 @@ pre {
   width: 24px; /* Match the SVG dimensions */
   height: 24px; /* Match the SVG dimensions */
   position: relative;
+  background-color: white; /* Set background to white */
 }
 
 .bubble1, .bubble2, .bubble3 {
