@@ -83,6 +83,17 @@ pre {
 }
 
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent; /* Ensure no default background color */
+}
+
+body {
+  background-color: white; /* Ensure the body background is white */
+}
 
 .bubble-typing {
   display: flex;
@@ -92,6 +103,8 @@ pre {
   height: 24px; /* Match the SVG dimensions */
   background-color: white; /* Ensure background is pure white */
   position: relative;
+  box-shadow: none; /* Ensure no box-shadow */
+  border: none; /* Ensure no border */
 }
 
 .bubble1, .bubble2, .bubble3 {
@@ -103,8 +116,8 @@ pre {
   animation: spinner_vXu6 1.2s cubic-bezier(0.52, .6, .25, .99) infinite;
   margin: 0; /* Ensure no margins */
   padding: 0; /* Ensure no padding */
-  border: none; /* Ensure no borders */
   box-shadow: none; /* Ensure no box-shadow */
+  border: none; /* Ensure no border */
 }
 
 .bubble2 {
@@ -125,6 +138,7 @@ pre {
     opacity: 0;
   }
 }
+
 
 
 
