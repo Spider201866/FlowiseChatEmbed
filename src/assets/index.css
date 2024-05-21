@@ -85,17 +85,20 @@ pre {
 
 
 .bubble-typing {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
+  width: 24px; /* Set a width to contain the animation */
+  height: 24px; /* Set a height to contain the animation */
 }
 
 .bubble1, .bubble2, .bubble3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
   background-color: var(--chatbot-host-bubble-color);
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  position: absolute;
+  transform: translate(-50%, -50%);
   animation: spinner_vXu6 1.2s cubic-bezier(0.52, .6, .25, .99) infinite;
 }
 
@@ -119,6 +122,7 @@ pre {
     opacity: 0;
   }
 }
+
 
 
 
