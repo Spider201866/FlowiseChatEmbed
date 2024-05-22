@@ -83,27 +83,32 @@ pre {
 }
 
 
+
 .bubble-typing {
   transition:
     width 400ms ease-out,
     height 400ms ease-out;
 }
 
-.bubble1, .bubble2, .bubble3 {
-  background-color: rgba(255, 0, 0, 0.7);  /* Red tint with opacity */
+.bubble1, .bubble3 {
+  background-color: rgba(0, 0, 0, 0.7);  /* Black tint with opacity */
   opacity: 0.7;  /* Adjusted opacity */
   width: 8px;  /* Added width */
   height: 8px; /* Added height */
   border-radius: 50%; /* Ensures the bubbles are circular */
 }
 
-.bubble1 {
-  animation: chatBubbles 1s ease-in-out infinite;
+.bubble2 {
+  background-color: rgba(0, 0, 0, 0.7); /* Initial black tint with opacity */
+  opacity: 0.7;  /* Adjusted opacity */
+  width: 8px;  /* Added width */
+  height: 8px; /* Added height */
+  border-radius: 50%; /* Ensures the bubbles are circular */
+  animation: chatBubblesColor 1s ease-in-out infinite; /* Color animation */
 }
 
-.bubble2 {
+.bubble1 {
   animation: chatBubbles 1s ease-in-out infinite;
-  animation-delay: 0.3s;
 }
 
 .bubble3 {
@@ -119,6 +124,15 @@ pre {
   50% {
     transform: scale(1.5);
     opacity: 1;
+  }
+}
+
+@keyframes chatBubblesColor {
+  0%, 100% {
+    background-color: rgba(0, 0, 0, 0.7); /* Black tint */
+  }
+  50% {
+    background-color: rgba(255, 0, 0, 0.7); /* Red tint */
   }
 }
 
