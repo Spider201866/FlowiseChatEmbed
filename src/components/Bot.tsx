@@ -891,7 +891,7 @@ export const Bot = (botProps: BotProps & { class?: string }) => {
                         backgroundColor={props.botMessage?.backgroundColor}
                         textColor={props.botMessage?.textColor}
                         feedbackColor={props.feedback?.color}
-                        showAvatar={props.botMessage?.showAvatar}
+                        showAvatar={props.botMessage?.showAvatar && message.message !== (props.welcomeMessage ?? defaultWelcomeMessage)}  // Ensure avatar is not shown for welcome message
                         avatarSrc={props.botMessage?.avatarSrc}
                         chatFeedbackStatus={chatFeedbackStatus()}
                         fontSize={props.fontSize}
