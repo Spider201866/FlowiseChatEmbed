@@ -43,9 +43,7 @@ export const Badge = (props: Props) => {
         color: props.poweredByTextColor ?? defaultTextColor,
         'background-color': props.badgeBackgroundColor ?? '#ffffff',
       }}
-    >
-      Powered by
-      <a
+    ><a
         ref={liteBadge}
         href={'https://medicine.st-andrews.ac.uk/arclight/'}
         target="_blank"
@@ -54,7 +52,7 @@ export const Badge = (props: Props) => {
         id="lite-badge"
         style={{ 'font-weight': 'bold', color: props.poweredByTextColor ?? defaultTextColor }}
       >
-        <span> Arclight</span>
+        <span></span>
       </a>
     </span>
   );
