@@ -11,6 +11,6 @@ export const AddImageIcon = (props: JSX.SvgSVGAttributes<SVGSVGElement>) => (
     stroke-linecap="round"
     stroke-linejoin="round"
   >
-    <path d="M7.5 7v10a5.5 5.5 0 1 0 11 0V5a3.5 3.5 0 1 0-7 0v9a1.5 1.5 0 1 0 3 0V7" />
+     <path d="M8 7v8a6 6 0 0 0 12 0V5a4 4 0 0 0-8 0v10a2 2 0 0 0 4 0V7" />
   </svg>
 );
