@@ -73,7 +73,7 @@ export const TextInput = (props: Props) => {
         'border-radius': '21px', // Rounded corners
         border: '1px solid black', // 1px black border
         'box-shadow': 'none', // No shadow
-        padding: '0px 3px', // Padding for better aesthetics
+        padding: '0px 0px', // Padding for better aesthetics
         'font-family': 'Calibri Light, sans-serif', // Font family
         'min-height': '15px', // Adjusted min-height for single line
         'max-height': '128px', // Maximum height to fit more lines
@@ -115,7 +115,7 @@ export const TextInput = (props: Props) => {
           color: props.textColor ?? defaultTextColor,
           'font-family': 'Poppins, sans-serif', // Font family
           'border-radius': '25px', // Rounded corners
-          padding: '0px 5px 0px 10px', // Adjusted padding: top, right, bottom, left
+          padding: '0px 5px 0px 15px', // Adjusted padding: top, right, bottom, left
           'box-sizing': 'border-box', // Ensure padding is included in the height
           'overflow-y': 'hidden', // Hide the scrollbar
           border: 'none', // No border
