@@ -71,9 +71,9 @@ export const TextInput = (props: Props) => {
         'background-color': '#f4f4f4', // Grey background
         color: props.textColor ?? defaultTextColor,
         'border-radius': '21px', // Rounded corners
-        border: 'none', // No border
+        border: '1px solid black', // 1px black border
         'box-shadow': 'none', // No shadow
-        padding: '5px 10px', // Padding for better aesthetics
+        padding: '2px 7px', // Padding for better aesthetics
         'font-family': 'Calibri Light, sans-serif', // Font family
         'min-height': '20px', // Adjusted min-height for single line
         'max-height': '128px', // Maximum height to fit more lines
